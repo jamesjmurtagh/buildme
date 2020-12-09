@@ -39,8 +39,8 @@ jobs:
         run: |
           curl --request POST \
            --url $FLUX_URL \
-           --header 'authorization: Bearer $FLUX_TOKEN' \
-           --header 'content-type: application/json' \
+           --header 'Authorization: Bearer $FLUX_TOKEN' \
+           --header 'Content-Type: application/json' \
            --data '{
              "specversion" : "1.0",
              "type" : "commitTrigger",
