@@ -37,6 +37,7 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
+          echo $FLUX_TOKEN
           curl --request POST \
            --url $FLUX_URL \
            --header 'Authorization: Bearer $FLUX_TOKEN' \
