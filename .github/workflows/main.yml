@@ -41,21 +41,21 @@ jobs:
            --url $FLUX_URL \
            --header "Authorization: Bearer $FLUX_TOKEN" \
            --header 'Content-Type: application/json' \
-           --data '{
-             "specversion" : "1.0",
-             "type" : "commitTrigger",
-             "source" : "githubActions",
-             "subject" : "123",
-             "id" : "A234-1234-1234",
-             "time" : "2018-04-05T17:31:00Z",
-             "datacontenttype" : "application/json",
-             "data" : {
-                "repo": "$GIT_REPO",
-                "login": "$DEMO_USERNAME",
-                "token": "$DOCKER_TOKEN",
-                "image": "$DOCKER_IMAGE",
-                "target": "$DOCKER_TARGET",
-                "email": "$EMAIL",
-                "project": "$GCP_PROJECT"
+           --data "{
+             \"specversion\" : \"1.0\",
+             \"type\" : \"commitTrigger\",
+             \"source\" : \"githubActions\",
+             \"subject\" : \"123\",
+             \"id\" : \"A234-1234-1234\",
+             \"time\" : \"2018-04-05T17:31:00Z\",
+             \"datacontenttype\" : \"application/json\",
+             \"data\" : {
+                \"repo\": \"$GIT_REPO\",
+                \"login\": \"$DEMO_USERNAME\",
+                \"token\": \"$DOCKER_TOKEN\",
+                \"image\": \"$DOCKER_IMAGE\",
+                \"target\": \"$DOCKER_TARGET\",
+                \"email\": \"$EMAIL\",
+                \"project\": \"$GCP_PROJECT\"
              }
-           }'         
+           }"         
