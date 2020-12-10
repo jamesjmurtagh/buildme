@@ -37,10 +37,9 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           GIT_REPO: ${{ secrets.GIT_REPO }}
         run: |
-          echo $FLUX_TOKEN
           curl --request POST \
            --url $FLUX_URL \
-           --header 'Authorization: Bearer $FLUX_TOKEN' \
+           --header "Authorization: Bearer $FLUX_TOKEN" \
            --header 'Content-Type: application/json' \
            --data '{
              "specversion" : "1.0",
